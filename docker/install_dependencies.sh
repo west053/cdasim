@@ -25,20 +25,21 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt-get update
 
 # Download apt dependencies
-sudo apt-get install -y --allow-unauthenticated gcc-7 g++-7 python3.6 unzip tar python3.6-dev \
+sudo apt-get install -y --allow-unauthenticated \
+  gcc-11 g++-11 unzip tar python3.10 python3.10-dev python3.10-distutils \
   pkg-config sqlite3 autoconf libtool curl make libxml2 libsqlite3-dev \
   libxml2-dev cmake libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev \
-  libgl2ps-dev python3.7 python3-pip automake openjdk-11-jdk ant python3.7-dev \
-  python3.7-distutils x11-xserver-utils dconf-editor dbus-x11 libglvnd0 libgl1 \
+  libgl2ps-dev python3-pip automake openjdk-11-jdk ant \
+  x11-xserver-utils dconf-editor dbus-x11 libglvnd0 libgl1 \
   libglx0 libegl1 libxext6 libx11-6 python3-dev \
   build-essential pkg-config lbzip2 libprotobuf-dev protobuf-compiler patch rsync \
   wget vim nano xterm libprotobuf-dev
 sudo rm -rf /var/lib/apt/lists/*
 
 sudo apt-get clean
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 20 --slave /usr/bin/g++ g++ /usr/bin/g++-7
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
-sudo update-alternatives --set python /usr/bin/python3.7
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 20 --slave /usr/bin/g++ g++ /usr/bin/g++-11
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
+sudo update-alternatives --set python /usr/bin/python3.10
 
 # Install SUMO-1.15.0
 cd /home/carma/src/
@@ -52,9 +53,9 @@ cmake ../..
 make -j$(nproc)
 sudo make install
 
-# Install python3.7 and lxml
-python3.7 -m pip install pip
-python3.7 -m pip install lxml==4.5.0
+# Install python3.10 and lxml
+python3.10 -m pip install pip
+python3.10 -m pip install lxml==4.5.0
 
 # Install CARLA
 CARLA_TAR="CARLA_0.9.10.tar.gz"
