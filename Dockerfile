@@ -12,13 +12,13 @@
 #  License for the specific language governing permissions and limitations under
 #  the License.
 
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 MAINTAINER Leidos, Inc.
 LABEL Description="Dockerised Simulation of Carla_Sumo_Mosaic"
 
-ENV SUMO_HOME /usr/share/sumo
-ENV SUMO_USER carma
+ENV SUMO_HOME=/usr/share/sumo
+ENV SUMO_USER=carma
 
 ARG VERSION
 ARG VCS_REF
@@ -36,8 +36,8 @@ LABEL org.label-schema.build-date=${BUILD_DATE}
 
 
 # Env vars for the nvidia-container-runtime.
-ENV NVIDIA_VISIBLE_DEVICES all
-ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
+ENV NVIDIA_VISIBLE_DEVICES=all
+ENV NVIDIA_DRIVER_CAPABILITIES=graphics,utility,compute
 
 RUN adduser $SUMO_USER --disabled-password
 
