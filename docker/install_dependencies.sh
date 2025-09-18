@@ -29,7 +29,7 @@ sudo apt-get install -y --allow-unauthenticated \
   gcc-11 g++-11 unzip tar python3.10 python3.10-dev python3.10-distutils \
   pkg-config sqlite3 autoconf libtool curl make libxml2 libsqlite3-dev \
   libxml2-dev cmake libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev \
-  libgl2ps-dev python3-pip automake openjdk-11-jdk ant \
+  libxslt1-dev libgl2ps-dev python3-pip automake openjdk-11-jdk ant \
   x11-xserver-utils dconf-editor dbus-x11 libglvnd0 libgl1 \
   libglx0 libegl1 libxext6 libx11-6 python3-dev \
   build-essential pkg-config lbzip2 libprotobuf-dev protobuf-compiler patch rsync \
