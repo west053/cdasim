@@ -31,7 +31,7 @@ sudo apt-get install -y --allow-unauthenticated \
   libxml2-dev cmake libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev \
   libxslt1-dev libgl2ps-dev python3-pip automake openjdk-11-jdk ant \
   x11-xserver-utils dconf-editor dbus-x11 libglvnd0 libgl1 \
-  libglx0 libegl1 libxext6 libx11-6 python3-dev \
+  zlib1g-dev libglx0 libegl1 libxext6 libx11-6 python3-dev \
   build-essential pkg-config lbzip2 libprotobuf-dev protobuf-compiler patch rsync \
   wget vim nano xterm libprotobuf-dev
 sudo rm -rf /var/lib/apt/lists/*
@@ -55,7 +55,8 @@ sudo make install
 
 # Install python3.10 and lxml
 python3.10 -m pip install pip
-python3.10 -m pip install lxml==4.5.0
+python3.10 -m pip install --upgrade pip
+python3.10 -m pip install "lxml>=4.9,<5"
 
 # Install CARLA
 CARLA_TAR="CARLA_0.10.0.tar.gz"
