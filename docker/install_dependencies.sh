@@ -59,7 +59,7 @@ python3.10 -m pip install --upgrade pip
 python3.10 -m pip install "lxml>=4.9,<5"
 
 # Install CARLA
-CARLA_TAR="CARLA_0.10.0.tar.gz"
+CARLA_TAR="Carla-0.10.0-LinuxShipping.tar.gz"
 cd /home/carma/src/
 if [[ ! -f "$CARLA_TAR" ]]; then
     echo "!!! $CARLA_TAR not present in the installation directory, downloading automatically instead. This could take a long time, consider downloading the file manually and placing it in the installation directory. !!!"
