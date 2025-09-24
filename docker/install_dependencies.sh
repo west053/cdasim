@@ -26,7 +26,7 @@ sudo apt-get update
 
 # Download apt dependencies
 sudo apt-get install -y --allow-unauthenticated \
-  gcc-11 g++-11 unzip tar python3.10 python3.10-dev python3.10-distutils \
+  gcc-7 g++-7 unzip tar python3.6 python3.6-dev python3.6-distutils \
   pkg-config sqlite3 autoconf libtool curl make libxml2 libsqlite3-dev \
   libxml2-dev cmake libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev \
   libxslt1-dev libgl2ps-dev python3-pip automake openjdk-11-jdk ant \
@@ -38,8 +38,8 @@ sudo rm -rf /var/lib/apt/lists/*
 
 sudo apt-get clean
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 20 --slave /usr/bin/g++ g++ /usr/bin/g++-11
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
-sudo update-alternatives --set python /usr/bin/python3.10
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
+sudo update-alternatives --set python /usr/bin/python3.6
 
 # Install SUMO-1.15.0
 cd /home/carma/src/
@@ -53,10 +53,10 @@ cmake ../..
 make -j$(nproc)
 sudo make install
 
-# Install python3.10 and lxml
-python3.10 -m pip install pip
-python3.10 -m pip install --upgrade pip
-python3.10 -m pip install "lxml>=4.9,<5"
+# Install python3.6 and lxml
+python3.6 -m pip install pip
+python3.6 -m pip install --upgrade pip
+python3.6 -m pip install "lxml>=4.5.0"
 
 # Install CARLA
 CARLA_TAR="Carla-0.10.0-Linux-Shipping.tar.gz"
