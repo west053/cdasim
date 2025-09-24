@@ -48,6 +48,7 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN adduser $SUMO_USER sudo --disabled-password
 COPY docker/ /home/carma/src/docker
 
+COPY Carla-0.10.0-Linux-Shipping.tar.gz /home/carma/src/ 2>/dev/null || true
 RUN /home/carma/src/docker/install_dependencies.sh
 
 COPY --chown=carma:carma . /home/carma/src
