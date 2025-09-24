@@ -52,10 +52,10 @@ cmake ../..
 make -j$(nproc)
 sudo make install
 
-# Install python3.6 and lxml
-python3.6 -m pip install pip
-python3.6 -m pip install --upgrade pip
-python3.6 -m pip install "lxml>=4.5.0"
+# Install python3.7 and lxml
+python3.7 -m pip install pip
+python3.7 -m pip install --upgrade pip
+python3.7 -m pip install "lxml>=4.5.0"
 
 # Install CARLA
 CARLA_TAR="Carla-0.10.0-Linux-Shipping.tar.gz"
