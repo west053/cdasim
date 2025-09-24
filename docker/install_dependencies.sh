@@ -25,7 +25,7 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt-get update
 
 # Download apt dependencies
-sudo apt-get install -y --allow-unauthenticated gcc-8 g++-8 unzip tar \
+sudo apt-get install -y --allow-unauthenticated gcc-11 g++-11 unzip tar \
   pkg-config sqlite3 autoconf libtool curl make libxml2 libsqlite3-dev \
   libxml2-dev cmake libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev \
   libxslt1-dev libgl2ps-dev python3.7 python3-pip automake openjdk-11-jdk ant \
@@ -36,7 +36,7 @@ sudo apt-get install -y --allow-unauthenticated gcc-8 g++-8 unzip tar \
 sudo rm -rf /var/lib/apt/lists/*
 
 sudo apt-get clean
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 20 --slave /usr/bin/g++ g++ /usr/bin/g++-8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 20 --slave /usr/bin/g++ g++ /usr/bin/g++-11
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
 sudo update-alternatives --set python /usr/bin/python3.7
 
