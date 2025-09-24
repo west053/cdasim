@@ -25,12 +25,11 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt-get update
 
 # Download apt dependencies
-sudo apt-get install -y --allow-unauthenticated \
-  gcc-7 g++-7 unzip tar python3.6 python3.6-dev python3.6-distutils \
+sudo apt-get install -y --allow-unauthenticated gcc-7 g++-7 python3.6 unzip tar python3.6-dev \
   pkg-config sqlite3 autoconf libtool curl make libxml2 libsqlite3-dev \
   libxml2-dev cmake libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev \
-  libxslt1-dev libgl2ps-dev python3-pip automake openjdk-11-jdk ant \
-  x11-xserver-utils dconf-editor dbus-x11 libglvnd0 libgl1 \
+  libxslt1-dev libgl2ps-dev python3.7 python3-pip automake openjdk-11-jdk ant \
+  python3.7-dev python3.7-distutils x11-xserver-utils dconf-editor dbus-x11 libglvnd0 libgl1 \
   zlib1g-dev libglx0 libegl1 libxext6 libx11-6 python3-dev \
   build-essential pkg-config lbzip2 libprotobuf-dev protobuf-compiler patch rsync \
   wget vim nano xterm libprotobuf-dev
