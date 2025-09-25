@@ -24,6 +24,9 @@ sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt-get update
 
+export DEBIAN_FRONTEND="noninteractive"
+export TZ="Etc/UTC"
+
 # Download apt dependencies
 sudo apt-get install -y --allow-unauthenticated \
   gcc-11 g++-11 unzip tar pkg-config sqlite3 autoconf libtool curl make \
