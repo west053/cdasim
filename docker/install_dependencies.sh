@@ -28,7 +28,7 @@ export DEBIAN_FRONTEND="noninteractive"
 export TZ="Etc/UTC"
 
 # Download apt dependencies
-sudo apt-get install -y --allow-unauthenticated \
+apt-get install -y --allow-unauthenticated \
   gcc-11 g++-11 unzip tar pkg-config sqlite3 autoconf libtool curl make \
   libxml2 libsqlite3-dev libxml2-dev cmake libxerces-c-dev libfox-1.6-dev \
   libgdal-dev libproj-dev libxslt1-dev libgl2ps-dev automake openjdk-11-jdk \
