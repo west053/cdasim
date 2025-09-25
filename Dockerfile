@@ -14,7 +14,7 @@
 
 FROM ubuntu:22.04
 
-MAINTAINER Leidos, Inc.
+LABEL maintainer="Leidos, Inc."
 LABEL Description="Dockerised Simulation of Carla_Sumo_Mosaic"
 
 ENV SUMO_HOME=/usr/share/sumo
